@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  webpage:
+    build:
+      context: ./
+      dockerfile: ./docker/node/Dockerfile
+    environment:
+      - VIRTUAL_HOST=parcel-react-toolbox.local
+    ports:
+      - "80"
+    volumes:
+      - ./:/application:delegated
+    restart: always
+    stdin_open: true
+    tty: true
+    networks:
+      expose_network:
+
+networks:
+  # Join proxy network for exposing http services
+  expose_network:
+    external:
+      name: web_proxy
+

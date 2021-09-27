@@ -1,0 +1,15 @@
+{
+  "name": "parcel-react-toolbox-bug",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "parcel build index.html --dist-dir build/release --public-url ./",
+    "dev": "parcel index.html --dist-dir build/debug -p 80 --host 0.0.0.0 --no-autoinstall --hmr-port 43575"
+  },
+  "dependencies": {
+    "parcel": "^2.0.0-rc.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-toolbox": "^2.0.0-beta.13"
+  },
+  "devDependencies": {}
+}
